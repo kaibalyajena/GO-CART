@@ -42,13 +42,15 @@ class ProductScreen extends StatelessWidget {
       ),
     ];
     return Scaffold(
-      appBar: AppBar(title: Text("GO CART")),
+      backgroundColor: Color.fromARGB(232, 255, 255, 255),
+      appBar: AppBar(
+          title: Text(
+        "GO  CART",
+        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+      )),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            childAspectRatio: 1.3,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10),
+            crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 10),
         itemBuilder: (context, i) => ProductItem(
             id: loadedProducts[i].id,
             title: loadedProducts[i].title,

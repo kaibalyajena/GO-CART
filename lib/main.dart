@@ -8,8 +8,10 @@ void main() {
 class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme:
-            ThemeData(primarySwatch: Colors.teal, accentColor: Colors.orange),
+        theme: ThemeData(
+            primarySwatch: Colors.teal,
+            accentColor: Colors.orange,
+            fontFamily: 'Combo'),
         debugShowCheckedModeBanner: false,
         home: ProductScreen());
   }

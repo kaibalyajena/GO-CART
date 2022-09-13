@@ -10,21 +10,52 @@ class ProductItem extends StatelessWidget {
   ProductItem({required this.id, required this.title, required this.imageUrl});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20), color: Colors.green),
-      child: GridTile(
-        child: Image.network(
-          imageUrl,
-          fit: BoxFit.cover,
+    return GridTile(
+      child: Image.network(
+        imageUrl,
+        fit: BoxFit.cover,
+      ),
+      footer: GridTileBar(
+        leading: IconButton(
+          icon: Icon(
+            Icons.favorite,
+            color: Colors.orange.withOpacity(0.8),
+          ),
+          onPressed: () {},
         ),
-        footer: GridTileBar(
-            backgroundColor: Colors.grey.withOpacity(0.7),
-            title: Text(
-              title,
-              textAlign: TextAlign.center,
-            )),
+        backgroundColor: Colors.teal.withOpacity(0.7),
+        title: Text(
+          title,
+          textAlign: TextAlign.center,
+        ),
+        trailing: IconButton(
+          icon: Icon(Icons.shopping_cart),
+          onPressed: () {},
+        ),
       ),
     );
   }
+  // Widget build(BuildContext context) {
+  //   double w = MediaQuery.of(context).size.width;
+  //   return Container(
+  //     decoration: BoxDecoration(
+  //       borderRadius: BorderRadius.circular(20),
+  //     ),
+  //     child: Stack(
+  //       children: [
+  //         Image.network(
+  //           imageUrl,
+  //           fit: BoxFit.cover,
+  //         ),
+  //         Padding(
+  //           padding: EdgeInsets.only(left: 30, top: 100),
+  //           child: Text(
+  //             title,
+  //             style: TextStyle(color: Colors.black),
+  //           ),
+  //         )
+  //       ],
+  //     ),
+  //   );
+  // }
 }

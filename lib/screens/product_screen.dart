@@ -42,7 +42,7 @@ class ProductScreen extends StatelessWidget {
       ),
     ];
     return Scaffold(
-      appBar: AppBar(title: Text("Go Cart")),
+      appBar: AppBar(title: Text("GO CART")),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
